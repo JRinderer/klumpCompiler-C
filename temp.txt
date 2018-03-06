@@ -1,0 +1,18 @@
+dcl
+  a : int;
+  b : int;
+  c : int;
+  d : int;
+  e : int;
+begin
+  a := 3;
+  b := 2;
+  c := 6;
+  d := 4;
+  e := (a+b)*(c-d);
+  writeln (a);
+  writeln (b);
+  writeln (c);
+  writeln (d);
+  writeln (e);
+end.

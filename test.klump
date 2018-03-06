@@ -1,0 +1,72 @@
+if (a > 0)
+	then b:= 1 + 5;
+	else b:=2;
+if b <> x
+	then a>10;
+	else b <> 12;
+
+if 10 < 12 and 11 <= 13
+	then a <> c;
+	else b := 12
+
+
+
+global
+
+proc
+  factorial (n : int        ) : int;
+  fibonacci (n : int        ) : int;
+  strange   (n : int,c : int);
+
+procedure main;
+dcl
+  i     : int;
+  start : int;
+  count : int;
+
+              if(is2dOperator(words[intlArryi])==1){
+                  //printf("Result is a 1d operator");
+                  token[tokeni]=words[intlArryi];
+                  tokeni++;
+              } else{
+
+
+
+              }
+
+              <>
+              )<>)
+              =:
+              < >
+              =;
+              :=
+              ():
+              ));
+              > =
+              >=
+              < =
+              <=
+              global
+
+              proc
+                factorial (n : int        ) : int;
+                fibonacci (n : int        ) : int;
+                strange   (n : int,c : int);
+
+              procedure main;
+              dcl
+                i     : int;
+                start : int;
+                count : int;
+
+
+                if((testChar(chr,'{')==0)){
+                            int comntOvr = 1;
+
+                            while(comntOvr=1){
+                                if(getNxtPntdVal(filePntr)=='}'){
+                                    comntOvr=0;
+                                }else{
+                                    fseek(filePntr,-1,SEEK_CUR);
+                                }
+                            }
