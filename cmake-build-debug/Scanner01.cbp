@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/jrinder/CLionProjects/Parser---C/cmake-build-debug"/>
+				<Option working_dir="/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/jrinder/CLionProjects/Parser---C/cmake-build-debug"/>
+				<Option working_dir="/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/jrinder/CLionProjects/Parser---C/cmake-build-debug"/>
+				<Option working_dir="/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Scanner01">
-				<Option output="/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Scanner01" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jrinder/CLionProjects/Parser---C/cmake-build-debug"/>
+				<Option output="/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Scanner01" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -50,15 +50,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 Scanner01"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 Scanner01"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Scanner01/fast">
-				<Option output="/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Scanner01" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jrinder/CLionProjects/Parser---C/cmake-build-debug"/>
+				<Option output="/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Scanner01" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -69,41 +69,41 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 Scanner01/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 Scanner01/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/jrinder/CLionProjects/Parser---C/assmblr.c">
+		<Unit filename="/home/jrinder/CLionProjects/KLUMP-COMPILER/assmblr.c">
 			<Option target="Scanner01"/>
 		</Unit>
-		<Unit filename="/home/jrinder/CLionProjects/Parser---C/assmblr.h">
+		<Unit filename="/home/jrinder/CLionProjects/KLUMP-COMPILER/assmblr.h">
 			<Option target="Scanner01"/>
 		</Unit>
-		<Unit filename="/home/jrinder/CLionProjects/Parser---C/main.c">
+		<Unit filename="/home/jrinder/CLionProjects/KLUMP-COMPILER/main.c">
 			<Option target="Scanner01"/>
 		</Unit>
-		<Unit filename="/home/jrinder/CLionProjects/Parser---C/parser.c">
+		<Unit filename="/home/jrinder/CLionProjects/KLUMP-COMPILER/parser.c">
 			<Option target="Scanner01"/>
 		</Unit>
-		<Unit filename="/home/jrinder/CLionProjects/Parser---C/parser.h">
+		<Unit filename="/home/jrinder/CLionProjects/KLUMP-COMPILER/parser.h">
 			<Option target="Scanner01"/>
 		</Unit>
-		<Unit filename="/home/jrinder/CLionProjects/Parser---C/scanner.c">
+		<Unit filename="/home/jrinder/CLionProjects/KLUMP-COMPILER/scanner.c">
 			<Option target="Scanner01"/>
 		</Unit>
-		<Unit filename="/home/jrinder/CLionProjects/Parser---C/scanner.h">
+		<Unit filename="/home/jrinder/CLionProjects/KLUMP-COMPILER/scanner.h">
 			<Option target="Scanner01"/>
 		</Unit>
-		<Unit filename="/home/jrinder/CLionProjects/Parser---C/systemdefs.h">
+		<Unit filename="/home/jrinder/CLionProjects/KLUMP-COMPILER/systemdefs.h">
 			<Option target="Scanner01"/>
 		</Unit>
-		<Unit filename="/home/jrinder/CLionProjects/Parser---C/token.h">
+		<Unit filename="/home/jrinder/CLionProjects/KLUMP-COMPILER/token.h">
 			<Option target="Scanner01"/>
 		</Unit>
-		<Unit filename="/home/jrinder/CLionProjects/Parser---C/CMakeLists.txt">
+		<Unit filename="/home/jrinder/CLionProjects/KLUMP-COMPILER/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

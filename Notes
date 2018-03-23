@@ -389,3 +389,9 @@
         -Next is to create a symbol table. This table needs to store the variable identifier, the data type, the
         location in memory (global or local), whether it's updatable or a named constant. We also might want to also
         add to the function the ability to determine whether it will write to the .bss or .data
+=======================================3/5/2018 - END - JRinderer======================================================
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+=======================================3/11/2018 - START - JRinderer===================================================
+    ********Summary: Adding in the symbol table functions. After reading through docs source code I should initate the
+    tables within the parser proc. First we search line 289 in main cpp. Left off reading on line 213.

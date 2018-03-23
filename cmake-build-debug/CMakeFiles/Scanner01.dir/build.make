@@ -43,10 +43,10 @@ RM = /opt/clion/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jrinder/CLionProjects/Parser---C
+CMAKE_SOURCE_DIR = /home/jrinder/CLionProjects/KLUMP-COMPILER
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jrinder/CLionProjects/Parser---C/cmake-build-debug
+CMAKE_BINARY_DIR = /home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Scanner01.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Scanner01.dir/flags.make
 
 CMakeFiles/Scanner01.dir/main.c.o: CMakeFiles/Scanner01.dir/flags.make
 CMakeFiles/Scanner01.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Scanner01.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Scanner01.dir/main.c.o   -c /home/jrinder/CLionProjects/Parser---C/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Scanner01.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Scanner01.dir/main.c.o   -c /home/jrinder/CLionProjects/KLUMP-COMPILER/main.c
 
 CMakeFiles/Scanner01.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Scanner01.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrinder/CLionProjects/Parser---C/main.c > CMakeFiles/Scanner01.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrinder/CLionProjects/KLUMP-COMPILER/main.c > CMakeFiles/Scanner01.dir/main.c.i
 
 CMakeFiles/Scanner01.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Scanner01.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrinder/CLionProjects/Parser---C/main.c -o CMakeFiles/Scanner01.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrinder/CLionProjects/KLUMP-COMPILER/main.c -o CMakeFiles/Scanner01.dir/main.c.s
 
 CMakeFiles/Scanner01.dir/main.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Scanner01.dir/main.c.o.provides.build: CMakeFiles/Scanner01.dir/main.
 
 CMakeFiles/Scanner01.dir/scanner.c.o: CMakeFiles/Scanner01.dir/flags.make
 CMakeFiles/Scanner01.dir/scanner.c.o: ../scanner.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Scanner01.dir/scanner.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Scanner01.dir/scanner.c.o   -c /home/jrinder/CLionProjects/Parser---C/scanner.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Scanner01.dir/scanner.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Scanner01.dir/scanner.c.o   -c /home/jrinder/CLionProjects/KLUMP-COMPILER/scanner.c
 
 CMakeFiles/Scanner01.dir/scanner.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Scanner01.dir/scanner.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrinder/CLionProjects/Parser---C/scanner.c > CMakeFiles/Scanner01.dir/scanner.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrinder/CLionProjects/KLUMP-COMPILER/scanner.c > CMakeFiles/Scanner01.dir/scanner.c.i
 
 CMakeFiles/Scanner01.dir/scanner.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Scanner01.dir/scanner.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrinder/CLionProjects/Parser---C/scanner.c -o CMakeFiles/Scanner01.dir/scanner.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrinder/CLionProjects/KLUMP-COMPILER/scanner.c -o CMakeFiles/Scanner01.dir/scanner.c.s
 
 CMakeFiles/Scanner01.dir/scanner.c.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/Scanner01.dir/scanner.c.o.provides.build: CMakeFiles/Scanner01.dir/sc
 
 CMakeFiles/Scanner01.dir/parser.c.o: CMakeFiles/Scanner01.dir/flags.make
 CMakeFiles/Scanner01.dir/parser.c.o: ../parser.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Scanner01.dir/parser.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Scanner01.dir/parser.c.o   -c /home/jrinder/CLionProjects/Parser---C/parser.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Scanner01.dir/parser.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Scanner01.dir/parser.c.o   -c /home/jrinder/CLionProjects/KLUMP-COMPILER/parser.c
 
 CMakeFiles/Scanner01.dir/parser.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Scanner01.dir/parser.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrinder/CLionProjects/Parser---C/parser.c > CMakeFiles/Scanner01.dir/parser.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrinder/CLionProjects/KLUMP-COMPILER/parser.c > CMakeFiles/Scanner01.dir/parser.c.i
 
 CMakeFiles/Scanner01.dir/parser.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Scanner01.dir/parser.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrinder/CLionProjects/Parser---C/parser.c -o CMakeFiles/Scanner01.dir/parser.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrinder/CLionProjects/KLUMP-COMPILER/parser.c -o CMakeFiles/Scanner01.dir/parser.c.s
 
 CMakeFiles/Scanner01.dir/parser.c.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/Scanner01.dir/parser.c.o.provides.build: CMakeFiles/Scanner01.dir/par
 
 CMakeFiles/Scanner01.dir/assmblr.c.o: CMakeFiles/Scanner01.dir/flags.make
 CMakeFiles/Scanner01.dir/assmblr.c.o: ../assmblr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Scanner01.dir/assmblr.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Scanner01.dir/assmblr.c.o   -c /home/jrinder/CLionProjects/Parser---C/assmblr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Scanner01.dir/assmblr.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Scanner01.dir/assmblr.c.o   -c /home/jrinder/CLionProjects/KLUMP-COMPILER/assmblr.c
 
 CMakeFiles/Scanner01.dir/assmblr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Scanner01.dir/assmblr.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrinder/CLionProjects/Parser---C/assmblr.c > CMakeFiles/Scanner01.dir/assmblr.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jrinder/CLionProjects/KLUMP-COMPILER/assmblr.c > CMakeFiles/Scanner01.dir/assmblr.c.i
 
 CMakeFiles/Scanner01.dir/assmblr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Scanner01.dir/assmblr.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrinder/CLionProjects/Parser---C/assmblr.c -o CMakeFiles/Scanner01.dir/assmblr.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jrinder/CLionProjects/KLUMP-COMPILER/assmblr.c -o CMakeFiles/Scanner01.dir/assmblr.c.s
 
 CMakeFiles/Scanner01.dir/assmblr.c.o.requires:
 
@@ -169,7 +169,7 @@ Scanner01: CMakeFiles/Scanner01.dir/parser.c.o
 Scanner01: CMakeFiles/Scanner01.dir/assmblr.c.o
 Scanner01: CMakeFiles/Scanner01.dir/build.make
 Scanner01: CMakeFiles/Scanner01.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jrinder/CLionProjects/Parser---C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Scanner01"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Scanner01"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Scanner01.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -189,6 +189,6 @@ CMakeFiles/Scanner01.dir/clean:
 .PHONY : CMakeFiles/Scanner01.dir/clean
 
 CMakeFiles/Scanner01.dir/depend:
-	cd /home/jrinder/CLionProjects/Parser---C/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jrinder/CLionProjects/Parser---C /home/jrinder/CLionProjects/Parser---C /home/jrinder/CLionProjects/Parser---C/cmake-build-debug /home/jrinder/CLionProjects/Parser---C/cmake-build-debug /home/jrinder/CLionProjects/Parser---C/cmake-build-debug/CMakeFiles/Scanner01.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jrinder/CLionProjects/KLUMP-COMPILER /home/jrinder/CLionProjects/KLUMP-COMPILER /home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug /home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug /home/jrinder/CLionProjects/KLUMP-COMPILER/cmake-build-debug/CMakeFiles/Scanner01.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Scanner01.dir/depend
 

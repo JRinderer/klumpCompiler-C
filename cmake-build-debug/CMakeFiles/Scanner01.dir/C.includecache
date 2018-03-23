@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/jrinder/CLionProjects/Parser---C/assmblr.c
+/home/jrinder/CLionProjects/KLUMP-COMPILER/assmblr.c
 stdio.h
 -
 memory.h
 -
 assmblr.h
-/home/jrinder/CLionProjects/Parser---C/assmblr.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/assmblr.h
 token.h
-/home/jrinder/CLionProjects/Parser---C/token.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/token.h
 parser.h
-/home/jrinder/CLionProjects/Parser---C/parser.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/parser.h
 
-/home/jrinder/CLionProjects/Parser---C/assmblr.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/assmblr.h
 
-/home/jrinder/CLionProjects/Parser---C/main.c
+/home/jrinder/CLionProjects/KLUMP-COMPILER/main.c
 token.h
-/home/jrinder/CLionProjects/Parser---C/token.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/token.h
 stdio.h
 -
 stdlib.h
@@ -32,29 +32,29 @@ string.h
 ctype.h
 -
 scanner.h
-/home/jrinder/CLionProjects/Parser---C/scanner.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/scanner.h
 parser.h
-/home/jrinder/CLionProjects/Parser---C/parser.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/parser.h
 assmblr.h
-/home/jrinder/CLionProjects/Parser---C/assmblr.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/assmblr.h
 
-/home/jrinder/CLionProjects/Parser---C/parser.c
+/home/jrinder/CLionProjects/KLUMP-COMPILER/parser.c
 token.h
-/home/jrinder/CLionProjects/Parser---C/token.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/token.h
 stdio.h
 -
 memory.h
 -
 parser.h
-/home/jrinder/CLionProjects/Parser---C/parser.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/parser.h
 scanner.h
-/home/jrinder/CLionProjects/Parser---C/scanner.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/scanner.h
 assmblr.h
-/home/jrinder/CLionProjects/Parser---C/assmblr.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/assmblr.h
 
-/home/jrinder/CLionProjects/Parser---C/parser.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/parser.h
 
-/home/jrinder/CLionProjects/Parser---C/scanner.c
+/home/jrinder/CLionProjects/KLUMP-COMPILER/scanner.c
 stdio.h
 -
 strings.h
@@ -66,15 +66,15 @@ memory.h
 stdlib.h
 -
 token.h
-/home/jrinder/CLionProjects/Parser---C/token.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/token.h
 scanner.h
-/home/jrinder/CLionProjects/Parser---C/scanner.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/scanner.h
 systemdefs.h
-/home/jrinder/CLionProjects/Parser---C/systemdefs.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/systemdefs.h
 
-/home/jrinder/CLionProjects/Parser---C/scanner.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/scanner.h
 
-/home/jrinder/CLionProjects/Parser---C/systemdefs.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/systemdefs.h
 
-/home/jrinder/CLionProjects/Parser---C/token.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/token.h
 
