@@ -6,8 +6,10 @@
 #define SCANNER01_TABLES_H
 
 
+#include "token.h"
 
-void insertVarbleTble(char *, char *, int, int , char *);
+char varible[0];
+int insertVarbleTble(char *, char *, int, int , char *);
 int searchVarbleTble(char *);
 
 
