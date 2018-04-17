@@ -231,6 +231,33 @@ scanner.c.s:
 	$(MAKE) -f CMakeFiles/Scanner01.dir/build.make CMakeFiles/Scanner01.dir/scanner.c.s
 .PHONY : scanner.c.s
 
+tables.o: tables.c.o
+
+.PHONY : tables.o
+
+# target to build an object file
+tables.c.o:
+	$(MAKE) -f CMakeFiles/Scanner01.dir/build.make CMakeFiles/Scanner01.dir/tables.c.o
+.PHONY : tables.c.o
+
+tables.i: tables.c.i
+
+.PHONY : tables.i
+
+# target to preprocess a source file
+tables.c.i:
+	$(MAKE) -f CMakeFiles/Scanner01.dir/build.make CMakeFiles/Scanner01.dir/tables.c.i
+.PHONY : tables.c.i
+
+tables.s: tables.c.s
+
+.PHONY : tables.s
+
+# target to generate assembly for a file
+tables.c.s:
+	$(MAKE) -f CMakeFiles/Scanner01.dir/build.make CMakeFiles/Scanner01.dir/tables.c.s
+.PHONY : tables.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +279,9 @@ help:
 	@echo "... scanner.o"
 	@echo "... scanner.i"
 	@echo "... scanner.s"
+	@echo "... tables.o"
+	@echo "... tables.i"
+	@echo "... tables.s"
 .PHONY : help
 
 

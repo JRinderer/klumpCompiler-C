@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/Scanner01.dir/main.c.o CMakeFiles/Scanner01.dir/scanner.c.o CMakeFiles/Scanner01.dir/parser.c.o CMakeFiles/Scanner01.dir/assmblr.c.o  -o Scanner01 
+/usr/bin/cc -g   CMakeFiles/Scanner01.dir/main.c.o CMakeFiles/Scanner01.dir/scanner.c.o CMakeFiles/Scanner01.dir/parser.c.o CMakeFiles/Scanner01.dir/assmblr.c.o CMakeFiles/Scanner01.dir/tables.c.o  -o Scanner01 
