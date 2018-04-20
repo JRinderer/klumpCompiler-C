@@ -36,6 +36,10 @@ char endChar;
 int arryStrt;
 int identifSize;
 char *identifer[LIMIT];
+void parseGlobal();
+void parseConsts();
+void parseConstLsts();
+void parseConstnts(char *, char *);
 
 
 #endif //SCANNER01_PARSER_H

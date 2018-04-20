@@ -76,5 +76,17 @@ systemdefs.h
 
 /home/jrinder/CLionProjects/KLUMP-COMPILER/systemdefs.h
 
+/home/jrinder/CLionProjects/KLUMP-COMPILER/tables.c
+stdio.h
+-
+stdlib.h
+-
+tables.h
+/home/jrinder/CLionProjects/KLUMP-COMPILER/tables.h
+
+/home/jrinder/CLionProjects/KLUMP-COMPILER/tables.h
+lzma.h
+-
+
 /home/jrinder/CLionProjects/KLUMP-COMPILER/token.h
 

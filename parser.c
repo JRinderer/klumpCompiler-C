@@ -73,10 +73,63 @@ void startParser(){
 }
 
 void beginParser(){
+    parseGlobal();
     parseDecDefs();
     parseProc();
     //getNextStrngArry(arryStrt);
     printf("The last token is %s",tokn);
+}
+
+void parseGlobal(){
+    if(compLexTok(lexm,tokn,"GLOBAL")==1){
+        return;
+    }else{
+        getNextStrngArry(arryStrt);
+        parseConsts();
+    }
+}
+
+void parseConsts(){
+
+    if(compLexTok(lexm,tokn,"CONST")==1){
+        return;
+    }else{
+        getNextStrngArry(arryStrt);
+        parseConstLsts();
+    }
+
+}
+
+void parseConstLsts(){
+    int i = 1;
+//LEFT OFF IN HERE TOO
+    while(i = 1){
+        i = 0;
+        matchLexTok(lexm,tokn, "IDENTIF");
+        identifSize++;
+        identifer[arryC]=lexm;
+        arryC++;
+        getNextStrngArry(arryStrt);
+        matchLexTok(lexm,tokn,":");
+        parseConstnts("","");
+        if(compLexTok(lexm,tokn,"IDENTIF")==1){
+            i = 1;
+        }
+    }
+}
+
+void parseConstnts(char *tmpTokn1, char *tmpLexm1){ //this is where I left off...
+    if(!strcmp(tokn,"CONST")){
+        tmpTokn1 =tokn[arryStrt];
+        if(tmpTokn1=="NUMERIC"){
+            tmpTokn1="INT";
+        }else if(tmpTokn1="DECIMAL"){
+            tmpTokn1="REAL";
+        }else{
+            tmpTokn1="STRING";
+        }
+        tmpLexm1 = lexm[arryStrt];
+    }
 }
 
 void parseDecDefs(){
@@ -135,7 +188,7 @@ void parseIndvStatmnt(){
 
 void parseWrtLne(){
     int strngLen;
-    char strLeng[12];
+    char strLeng[40];
     char *tmpLexm;
     tmpLexm=lexem[arryStrt];
     matchLexTok(lexm,tokn,"WRITELN");

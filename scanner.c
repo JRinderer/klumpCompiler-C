@@ -113,6 +113,10 @@ TokenType getTokenType(FILE *filePntr, int scanrParser) {
         }
     }
     printTokens();
+//in order to create an array in C memory allocaiton is needed. to simplify this I should need no more than the total
+// lines multiplied by 2. This will be the size of my array
+    counts = counts*2;
+
     return EOT;
 }
 //=====================================================================================================================
@@ -190,6 +194,7 @@ void writeLnes(char * txt1, char * txt2){
     flPntr = fopen("scnr.scan","a");
     fputs(stngHldr,flPntr);
     fclose(flPntr);
+    counts= counts+1;
 }
 //=====================================================================================================================
 //*********************************************************************************************************************

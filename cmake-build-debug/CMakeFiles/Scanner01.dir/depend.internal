@@ -23,3 +23,6 @@ CMakeFiles/Scanner01.dir/scanner.c.o
  /home/jrinder/CLionProjects/KLUMP-COMPILER/scanner.h
  /home/jrinder/CLionProjects/KLUMP-COMPILER/systemdefs.h
  /home/jrinder/CLionProjects/KLUMP-COMPILER/token.h
+CMakeFiles/Scanner01.dir/tables.c.o
+ /home/jrinder/CLionProjects/KLUMP-COMPILER/tables.c
+ /home/jrinder/CLionProjects/KLUMP-COMPILER/tables.h

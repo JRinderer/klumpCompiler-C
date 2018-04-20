@@ -23,3 +23,6 @@ CMakeFiles/Scanner01.dir/scanner.c.o: ../scanner.h
 CMakeFiles/Scanner01.dir/scanner.c.o: ../systemdefs.h
 CMakeFiles/Scanner01.dir/scanner.c.o: ../token.h
 
+CMakeFiles/Scanner01.dir/tables.c.o: ../tables.c
+CMakeFiles/Scanner01.dir/tables.c.o: ../tables.h
+

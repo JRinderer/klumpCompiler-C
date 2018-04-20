@@ -5,7 +5,7 @@
 #ifndef SCANNER01_SYSTEMDEFS_H
 #define SCANNER01_SYSTEMDEFS_H
 
-
+int counts;
 
 char *keywords[42] = {"AND", "ARRAY", "ASCII", "BEGIN", "BOOL", "BREAK", "CALL",
                       "CASE", "CONST", "CSTRING", "DCL", "DECIMAL", "DEFAULT", "DO",
