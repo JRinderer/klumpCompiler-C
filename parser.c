@@ -12,6 +12,7 @@ char token[LIMIT][MAX];
 char lexem[LIMIT][MAX];
 int arryC=0;
 
+char *cons[5] = {"NUMERIC","DECIMAL","REAL","STRING"};
 
 void startParser(){
     char currentChar;
@@ -22,6 +23,7 @@ void startParser(){
     int chrType;
     int lineNo=1;
     int totalI=0;
+    int isDecml = 0;
 
     //====================================OPEN THE .SCAN FILE==========================================================
     if ((filePntr = fopen("scnr.scan", "r"))==NULL){
@@ -44,15 +46,28 @@ void startParser(){
                  fseek(filePntr, -1, SEEK_CUR);
                  goto reset;
              }
+             //need a test for decimal
              if(currentChar!='\t'){
                  build2dArry(token, intI, intJ, currentChar, filePntr, chrType);
+                 if(!strcmp(token[intI],"DECIMAL")){
+                     isDecml = 1;
+                 }
                  intI++; intJ=0;
              }else if(currentChar=='\t'){
-                 skipTabs(currentChar);
-                 currentChar=fgetc(filePntr);
-                 chrType=charType(currentChar);
-                 build2dArry(lexem, intA, intB, currentChar, filePntr, chrType);
-                 intA++; intB=0;
+                 if(isDecml == 1){
+                     skipTabs(currentChar);
+                     currentChar=fgetc(filePntr);
+                     chrType=charType(currentChar);
+                     build2dArryNum(lexem,intA,intB,currentChar,filePntr);
+                     intA++; intB=0;
+                     isDecml=0;
+                 }else{
+                     skipTabs(currentChar);
+                     currentChar=fgetc(filePntr);
+                     chrType=charType(currentChar);
+                     build2dArry(lexem, intA, intB, currentChar, filePntr, chrType);
+                     intA++; intB=0;
+                 }
              }
              totalI++;
              fseek(filePntr, -1, SEEK_CUR);
@@ -86,7 +101,12 @@ void parseGlobal(){
     }else{
         getNextStrngArry(arryStrt);
         parseConsts();
+
     }
+}
+
+void parseTypDefs(){
+
 }
 
 void parseConsts(){
@@ -106,12 +126,16 @@ void parseConstLsts(){
     while(i = 1){
         i = 0;
         matchLexTok(lexm,tokn, "IDENTIF");
+        char *tmpLexm;
+        tmpLexm=lexem[arryStrt-1]; //subtract one from array to get the previous lexeme as I've advanced it
+        identifer[arryC]=tmpLexm; // this is grabbing the next line down
         identifSize++;
-        identifer[arryC]=lexm;
         arryC++;
-        getNextStrngArry(arryStrt);
+        //breaking right here at decimal removing to get after
+//        getNextStrngArry(arryStrt);
         matchLexTok(lexm,tokn,":");
         parseConstnts("","");
+        //Here is where we start to search the global DCL table first run should return a false
         if(compLexTok(lexm,tokn,"IDENTIF")==1){
             i = 1;
         }
@@ -119,15 +143,26 @@ void parseConstLsts(){
 }
 
 void parseConstnts(char *tmpTokn1, char *tmpLexm1){ //this is where I left off...
-    if(!strcmp(tokn,"CONST")){
-        tmpTokn1 =tokn[arryStrt];
-        if(tmpTokn1=="NUMERIC"){
+    //this first if needs to check if tokn is part of the constants array
+    int cont = 0;
+
+    for(int i = 0; i<4;i++){
+        if(!strcmp(cons[i],tokn)){
+            cont = 1;
+            break;
+        }
+    }
+
+    if(cont=1){
+        tmpTokn1 ="";
+        if(tokn=="NUMERIC"){
             tmpTokn1="INT";
-        }else if(tmpTokn1="DECIMAL"){
+        }else if(tokn="DECIMAL"){
             tmpTokn1="REAL";
         }else{
-            tmpTokn1="STRING";
+            tokn="STRING";
         }
+        //Once I find out what the token is I need to store it's value
         tmpLexm1 = lexm[arryStrt];
     }
 }

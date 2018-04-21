@@ -7,7 +7,6 @@
 #ifndef SCANNER01_PARSER_H
 #define SCANNER01_PARSER_H
 
-
 void startParser();
 void skipTabs(char c);
 int isEmpty(FILE *);
@@ -21,6 +20,7 @@ int compLexTok(char *, char *, char *);
 void beginParser();
 void parseDecDefs();
 void parseProc();
+void parseTypDef();
 void parseStatmntsLst();
 void parseIndvStatmnt();
 void parseWrtLne();

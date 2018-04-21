@@ -1,4 +1,4 @@
-/*
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -70,8 +70,8 @@ int returnSize(){
     return i;
 }
 
-int main() {
-    dummyItem = (struct varibles*) malloc(sizeof(struct varibles));
+int mainTble() {
+    dummyItem = (struct varibles *) malloc(sizeof(struct varibles));
     dummyItem->ident = "test";
     dummyItem->type = "test";
     dummyItem->key = -1;
@@ -83,19 +83,19 @@ int main() {
 
     int arrySize = returnSize();
 
-    insertVaribles("TestVar","CSTRING",0,0,0,0,arrySize);
+    insertVaribles("TestVar", "CSTRING", 0, 0, 0, 0, arrySize);
     arrySize = returnSize();
-    insertVaribles("TestVarInt","INT",1,1,0,0,arrySize);
+    insertVaribles("TestVarInt", "INT", 1, 1, 0, 0, arrySize);
 
-    strHolder = searchTable(1,"TestVar3");
+    strHolder = searchTable(1, "TestVar3");
 
-    if(strHolder!=NULL) {
-        printf("The value %s already exists\n",strHolder);
-    }else{
+    if (strHolder != NULL) {
+        printf("The value %s already exists\n", strHolder);
+    } else {
         arrySize = returnSize();
-        insertVaribles("TestVar3","INT",1,1,0,0,arrySize);
+        insertVaribles("TestVar3", "INT", 1, 1, 0, 0, arrySize);
     }
     displayTest();
 
     return 0;
-}*/
+}

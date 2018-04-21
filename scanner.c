@@ -207,7 +207,7 @@ void build2dArry(char arry[LIMIT][MAX],int itemi, int itemj, char c, FILE * fPtr
     }
     arry[itemi][itemj] = '\0';
 }
-//=====================This function buuilds 2d array of numbers added back to resolve decimal issue==================
+//=====================This function builds 2d array of numbers added back to resolve decimal issue==================
 char build2dArryNum(char arry[LIMIT][MAX],int itemi, int itemj, char c, FILE * fPtr) {
     char retVar='N';
     arry[itemi][itemj++] = c;
