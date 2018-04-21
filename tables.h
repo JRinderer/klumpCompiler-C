@@ -9,6 +9,10 @@
 #include <lzma.h>
 
 #define SIZE 400
+//===================================universally available functions=================================
+//returns the key based on the size
+int returnHash(int);
+void fillDumyData();
 //===================================Support for Variable table======================================
 struct varibles{
     char *ident;
@@ -25,12 +29,10 @@ struct varibles* varArry[SIZE];
 struct varibles* dummyItem;
 struct varibles* item;
 
-//returns the key based on the size
-int returnHash(int);
 
-struct varibles *searchTable(int, char *);
+struct varibles *searchTable(int, char *, int);
 
-void insertVaribles(char *, char *, int, int, int, int, int);
+void insertVaribles(char *, char *, int, int, int, char *, int);
 
 void displayTest();
 int returnSize();
@@ -51,12 +53,14 @@ struct types{
 };
 
 struct types* typesArry[SIZE];
-struct types* dummyTyppeItem[SIZE];
-struct types* itemType[SIZE];
+struct types* dummyTypeItem;
+struct types* itemType;
 
 struct types *searchTableType(int, char *);
 
 void insertTypes(char *, int, int, char*);
+
+struct types *searchTypeTable(int, char *);
 
 #endif //SCANNER01_TABLES_H
 

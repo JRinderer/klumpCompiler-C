@@ -7,6 +7,7 @@
 #include "parser.h"
 #include "scanner.h"
 #include "assmblr.h"
+#include "tables.h"
 
 char token[LIMIT][MAX];
 char lexem[LIMIT][MAX];
@@ -24,6 +25,8 @@ void startParser(){
     int lineNo=1;
     int totalI=0;
     int isDecml = 0;
+
+    fillDumyData();//How best to fill in data
 
     //====================================OPEN THE .SCAN FILE==========================================================
     if ((filePntr = fopen("scnr.scan", "r"))==NULL){
@@ -122,27 +125,35 @@ void parseConsts(){
 
 void parseConstLsts(){
     int i = 1;
+    int x;
 //LEFT OFF IN HERE TOO
     while(i = 1){
         i = 0;
         matchLexTok(lexm,tokn, "IDENTIF");
-        char *tmpLexm;
+        char *tmpLexm; //this might need to be globally available
         tmpLexm=lexem[arryStrt-1]; //subtract one from array to get the previous lexeme as I've advanced it
+        char *tmpTokn = token[arryStrt-1];
         identifer[arryC]=tmpLexm; // this is grabbing the next line down
         identifSize++;
         arryC++;
         //breaking right here at decimal removing to get after
 //        getNextStrngArry(arryStrt);
         matchLexTok(lexm,tokn,":");
-        parseConstnts("","");
+        parseConstnts();
         //Here is where we start to search the global DCL table first run should return a false
-        if(compLexTok(lexm,tokn,"IDENTIF")==1){
+        x=searchVarblTble(tmpLexm,0);
+        if(x != 1){
+            insertVaribles(tmpLexm,typeToAdd,0,0,0,valToAdd,0);
+        }
+        //error handler here
+        if(compLexTok(tmpLexm,tmpTokn,"IDENTIF")==1){
             i = 1;
+            getNextStrngArry(arryStrt);//where do I increase the pointer?
         }
     }
 }
 
-void parseConstnts(char *tmpTokn1, char *tmpLexm1){ //this is where I left off...
+void parseConstnts(){ //this is where I left off...
     //this first if needs to check if tokn is part of the constants array
     int cont = 0;
 
@@ -154,16 +165,21 @@ void parseConstnts(char *tmpTokn1, char *tmpLexm1){ //this is where I left off..
     }
 
     if(cont=1){
-        tmpTokn1 ="";
+        //ensure these global values are reset
+        typeToAdd ="";
+        valToAdd = "";
         if(tokn=="NUMERIC"){
-            tmpTokn1="INT";
+            typeToAdd="INT";
         }else if(tokn="DECIMAL"){
-            tmpTokn1="REAL";
+            typeToAdd="REAL";
         }else{
-            tokn="STRING";
+            typeToAdd="STRING";
         }
         //Once I find out what the token is I need to store it's value
-        tmpLexm1 = lexm[arryStrt];
+        valToAdd = lexem[arryStrt];
+
+    }else{
+        printf("An error has occured in your CONSTANTS");
     }
 }
 
@@ -346,4 +362,14 @@ void getNextStrngArry(int curntArr){
     tokn = token[curntArr+1];
     lexm = lexem[curntArr + 1];
     arryStrt = curntArr + 1;
+}//===================================The below functions communicate with the tables.c===============================
+int searchVarblTble(char *val, int tble){ //pass the lexeme and search the tables
+    int isGlobal;
+    isGlobal =searchTable(0,val,tble);
+    if(isGlobal!=NULL){
+        isGlobal =searchTable(0,val,tble);
+        return isGlobal;
+    }else{
+        return isGlobal;
+    }
 }

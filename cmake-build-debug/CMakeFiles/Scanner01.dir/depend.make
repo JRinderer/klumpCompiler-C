@@ -16,6 +16,7 @@ CMakeFiles/Scanner01.dir/parser.c.o: ../assmblr.h
 CMakeFiles/Scanner01.dir/parser.c.o: ../parser.c
 CMakeFiles/Scanner01.dir/parser.c.o: ../parser.h
 CMakeFiles/Scanner01.dir/parser.c.o: ../scanner.h
+CMakeFiles/Scanner01.dir/parser.c.o: ../tables.h
 CMakeFiles/Scanner01.dir/parser.c.o: ../token.h
 
 CMakeFiles/Scanner01.dir/scanner.c.o: ../scanner.c

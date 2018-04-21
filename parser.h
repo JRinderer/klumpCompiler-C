@@ -7,6 +7,10 @@
 #ifndef SCANNER01_PARSER_H
 #define SCANNER01_PARSER_H
 
+
+char *typeToAdd;
+char *valToAdd;
+
 void startParser();
 void skipTabs(char c);
 int isEmpty(FILE *);
@@ -39,7 +43,7 @@ char *identifer[LIMIT];
 void parseGlobal();
 void parseConsts();
 void parseConstLsts();
-void parseConstnts(char *, char *);
-
+void parseConstnts();
+int searchVarblTble(char *val, int);
 
 #endif //SCANNER01_PARSER_H
