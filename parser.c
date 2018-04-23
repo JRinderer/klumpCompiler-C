@@ -13,7 +13,7 @@ char token[LIMIT][MAX];
 char lexem[LIMIT][MAX];
 int arryC=0;
 
-char *cons[5] = {"NUMERIC","DECIMAL","REAL","STRING"};
+char *cons[5] = {"NUMERIC","DECIMAL","REAL","CSTRING"};
 
 void startParser(){
     char currentChar;
@@ -25,6 +25,7 @@ void startParser(){
     int lineNo=1;
     int totalI=0;
     int isDecml = 0;
+    int isCString = 0;
 
     fillDumyData();//How best to fill in data
 
@@ -35,7 +36,7 @@ void startParser(){
     }
     //>>>>>>>>>>>>>>>>>>>>>>Before we can even begin parsing the TOKENS and LEXEME we have to build the chars into
     //>>>>>>>>>>>>>>>>>>>>>>words as we did in the scanner. Once we've built the words we can then begin parsing them
-    //
+    //There is an issue in here with the .scan file where the CSTRINGS with a space ending in ' are being separated.
      fseek(filePntr, 0, SEEK_END);
      if(isEmpty(filePntr)==1){
          printf("The .scan file is empty\n");
@@ -54,6 +55,8 @@ void startParser(){
                  build2dArry(token, intI, intJ, currentChar, filePntr, chrType);
                  if(!strcmp(token[intI],"DECIMAL")){
                      isDecml = 1;
+                 }if(!strcmp(token[intI],"CSTRING")){
+                     isCString = 1;
                  }
                  intI++; intJ=0;
              }else if(currentChar=='\t'){
@@ -64,6 +67,15 @@ void startParser(){
                      build2dArryNum(lexem,intA,intB,currentChar,filePntr);
                      intA++; intB=0;
                      isDecml=0;
+                 }else if(isCString == 1) {
+                     skipTabs(currentChar);
+                     currentChar = fgetc(filePntr);
+                     chrType = charType(currentChar);
+                     //buildString(words,intlArryi,intlArryj,chr,filePntr,chrType,'\'');
+                     buildString(lexem, intA, intB, currentChar, filePntr, chrType, '\'');
+                     intA++;
+                     intB++;
+                     isCString = 0;
                  }else{
                      skipTabs(currentChar);
                      currentChar=fgetc(filePntr);
@@ -126,6 +138,7 @@ void parseConsts(){
 void parseConstLsts(){
     int i = 1;
     int x;
+    int size;
 //LEFT OFF IN HERE TOO
     while(i = 1){
         i = 0;
@@ -136,20 +149,24 @@ void parseConstLsts(){
         identifer[arryC]=tmpLexm; // this is grabbing the next line down
         identifSize++;
         arryC++;
-        //breaking right here at decimal removing to get after
-//        getNextStrngArry(arryStrt);
+        //getNextStrngArry(arryStrt);
         matchLexTok(lexm,tokn,":");
         parseConstnts();
         //Here is where we start to search the global DCL table first run should return a false
         x=searchVarblTble(tmpLexm,0);
+        //===============Need a method to find the current size of the table so I can auto index============
         if(x != 1){
-            insertVaribles(tmpLexm,typeToAdd,0,0,0,valToAdd,0);
+            size = returnSize();
+            insertVaribles(tmpLexm,typeToAdd,0,0,0,valToAdd,size);
+
         }
         //error handler here
-        if(compLexTok(tmpLexm,tmpTokn,"IDENTIF")==1){
+        matchLexTok(lexm,tokn,";");
+        if(compLexTok(tmpLexm,tmpTokn,"IDENTIF")==0){
+//            getNextStrngArry(arryStrt); //incrementing the pointer seems to be skipping...
             i = 1;
-            getNextStrngArry(arryStrt);//where do I increase the pointer?
         }
+        //getNextStrngArry(arryStrt);//incrementing the pointer seems to be skipping...
     }
 }
 
@@ -168,15 +185,16 @@ void parseConstnts(){ //this is where I left off...
         //ensure these global values are reset
         typeToAdd ="";
         valToAdd = "";
-        if(tokn=="NUMERIC"){
+        if(!strcmp(tokn,"NUMERIC")){
             typeToAdd="INT";
-        }else if(tokn="DECIMAL"){
+        }else if(!strcmp(tokn,"DECIMAL")){
             typeToAdd="REAL";
         }else{
             typeToAdd="STRING";
         }
         //Once I find out what the token is I need to store it's value
         valToAdd = lexem[arryStrt];
+        getNextStrngArry(arryStrt);
 
     }else{
         printf("An error has occured in your CONSTANTS");

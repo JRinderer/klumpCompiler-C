@@ -164,6 +164,18 @@ int is2dOperator(char *strn){
     }
     return result;
 }
+int isPunct(char c){
+    int i;
+    int resulst=1;
+
+    for(i = 0 ; i<10;i++){
+        if(c == punct[i]){
+            resulst=0;
+        }
+    }
+    return resulst;
+
+}
 //=====================================================================================================================
 //*********************************************************************************************************************
 //=====================this function determines if the string is a constant like a string of text chars/numbers========
@@ -177,9 +189,12 @@ int isOperator(char c){
     int i;
     int results = 1;
 
-    for(i = 0; i< 22;i++){
-        //code to check against operator array
+    for(i = 0; i< 6;i++){
+        if(c == otherOperators[i]){
+            results = 0;
+        }
     }
+    return results;
 }
 //=====================================================================================================================
 //*********************************************************************************************************************
@@ -200,10 +215,36 @@ void writeLnes(char * txt1, char * txt2){
 //*********************************************************************************************************************
 //=====================this function builds a 2d array of continuous chars (ints included)=============================
 void build2dArry(char arry[LIMIT][MAX],int itemi, int itemj, char c, FILE * fPtr, int charsType) {
-    arry[itemi][itemj++] = c;
-    while (charType(c = fgetc(fPtr))==charsType){ //&& c != '\t'){ //||charType(c = fgetc(fPtr))==2
+    char prevChar;
+    char nextChar;
+    int cont = 0;
+    long offset;
 
+    offset = ftell(fPtr);
+
+    prevChar = c;
+
+    arry[itemi][itemj++] = c;
+
+    //prevChar = rewnd(c,fPtr);
+    //c = fgetc(fPtr);
+
+    //What is the logic I need to ensure consts are stored with chars or numbers?
+    //1.The previous char must be char
+    //2.The next char mut NOT be a '\n'
+    //Outcome: In order to ensure ; : ) don't get caught up in this array I need to test the previous char to make sure
+    //it's a char (type 1) and that it's not a punctuation.
+
+    while ((charType(c = fgetc(fPtr))==charsType || charType(prevChar)==1) && (isPunct(c)==1) && (isOperator(c)==1) && c !='\n' && c!=32 && c!='\t'){ //&& c != '\t'){ //||charType(c = fgetc(fPtr))==2
+        //prevChar = fgetc(fPtr);
         arry[itemi][itemj++]= mkeUprCse(c);
+        //arry[itemi][itemj++]= mkeUprCse(prevChar);
+        prevChar = c;
+        offset = ftell(fPtr);
+        fseek(fPtr,offset,SEEK_SET);
+
+
+        //c = fgetc(fPtr);
     }
     arry[itemi][itemj] = '\0';
 }
@@ -323,15 +364,19 @@ char mkeUprCse(char c) {
 //*********************************************************************************************************************
 //=====================Determines what the char type is. ispunct will require deeper dive==============================
 int charType(char c) {
+    int typ = 0;
     if(isalpha(c)){
-        return 1;
+        typ = 1;
     }else if(isdigit(c)){
-        return 2;
+        typ = 2;
     }else if(ispunct(c) && c!='\''){
-        return 3;
+        typ = 3;
     }else if(c=='\''){
-        return 4; //4 indicates a CSTRING. We will need to find a way to use the 2d array builder to build a CSTRING
+        typ = 4; //4 indicates a CSTRING. We will need to find a way to use the 2d array builder to build a CSTRING
+    }else if(isspace(c) && isalpha(c-1)){
+        typ = 1;
     }
+    return (typ);
 }
 //=====================================================================================================================
 //*********************************************************************************************************************
@@ -346,5 +391,12 @@ int isExAcceptableChar(char c) {
         return 1;
     } else
         return 0;
+}
+
+//===========================================Function to rewind pointer to a previous char=============================
+char rewnd(char curnt, FILE *fp){
+    char c;
+    c = getc(fp);
+    //ungetc()
 }
 

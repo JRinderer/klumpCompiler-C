@@ -22,4 +22,6 @@ int sizeOfPunctArry(char);
 int isPunctPartOf2D(char, char);
 void parseProg(char *);
 void parseDcls(char*, char*);
+char rewnd(char, FILE *);
+int isPunct(char);
 #endif //SCANNER01_SCANNER_H

@@ -395,60 +395,8 @@
 =======================================3/11/2018 - START - JRinderer===================================================
     ********Summary: Adding in the symbol table functions. After reading through docs source code I should initate the
     tables within the parser proc. First we search line 289 in main cpp. Left off reading on line 213.
-    =======Creating tables .c
-    #include <stdio.h>
-    #include <memory.h>
+=======================================Final Notes on Review===========================================================
+    The scanner is missing CONST and other variable names that contain numbers due to how I originally started detecting
+    them. I need a method to keep all strings of chars connected regardless of type.
 
-    #include "support.h"
-
-    int main() {
-        char *str = "name";
-        int successful;
-        successful = add(str);
-        arry[0]="";
-        if(successful>0){
-            printf("Ran\n");
-        }else{
-            printf("No\n");
-        }
-        return 0;
-    }
-
-    int add(char *ident){
-        if(exist(ident)==1){
-            printf("Exists\n");
-        }else{
-            printf("Doesn't exist\n");
-        }
-    }
-
-    int exist(char *ident){
-        int i;
-        int results = 1;
-        int size;
-
-        size = sizeof(arry)/ sizeof(arry[0]);
-
-        if(size==0 && ident == arry[size]){
-            results = 1;
-        }else{
-            arry[size]=ident;
-        }
-
-        for(i = 0; i<size;i++){
-            if(!strcmp(arry[i],ident)){
-                results = 0;
-            }
-        }
-        return (results);
-    }
-
-    .h
-    #ifndef UNTITLED8_SUPPORT_H
-    #define UNTITLED8_SUPPORT_H
-    int add(char *);
-
-    char arry[0];
-
-    #endif //UNTITLED8_SUPPORT_H
 
