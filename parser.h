@@ -32,6 +32,7 @@ void parseAssngmnt();
 void parseExprsn();
 void parseTerms();
 void parseTerms();
+void parseTypes();
 void parseAddTerms();
 void parseFactor();
 void parseAddExprsn();

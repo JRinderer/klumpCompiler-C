@@ -45,6 +45,8 @@ stdio.h
 -
 memory.h
 -
+stdlib.h
+-
 parser.h
 /home/jrinder/CLionProjects/KLUMP-COMPILER/parser.h
 scanner.h

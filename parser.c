@@ -4,6 +4,7 @@
 #include "token.h"
 #include <stdio.h>
 #include <memory.h>
+#include <stdlib.h>
 #include "parser.h"
 #include "scanner.h"
 #include "assmblr.h"
@@ -73,8 +74,8 @@ void startParser(){
                      chrType = charType(currentChar);
                      //buildString(words,intlArryi,intlArryj,chr,filePntr,chrType,'\'');
                      buildString(lexem, intA, intB, currentChar, filePntr, chrType, '\'');
-                     intA++;
-                     intB++;
+                     currentChar=fgetc(filePntr);
+                     intA++;intB=0;
                      isCString = 0;
                  }else{
                      skipTabs(currentChar);
@@ -116,12 +117,23 @@ void parseGlobal(){
     }else{
         getNextStrngArry(arryStrt);
         parseConsts();
+        parseTypDefs();
+        parseTypes();
 
     }
 }
 
 void parseTypDefs(){
+    if(compLexTok(lexm,tokn,"TYPE")==1){
+        return;
+    }else{
+        getNextStrngArry(arryStrt);
+        parseTypes();
+    }
+}
 
+void parseTypes(){
+    
 }
 
 void parseConsts(){
@@ -140,13 +152,14 @@ void parseConstLsts(){
     int x;
     int size;
 //LEFT OFF IN HERE TOO
-    while(i = 1){
+    while(i != 0){
+        //error is occuring in the building of strings
         i = 0;
         matchLexTok(lexm,tokn, "IDENTIF");
         char *tmpLexm; //this might need to be globally available
         tmpLexm=lexem[arryStrt-1]; //subtract one from array to get the previous lexeme as I've advanced it
         char *tmpTokn = token[arryStrt-1];
-        identifer[arryC]=tmpLexm; // this is grabbing the next line down
+        identifer[arryC]=tmpLexm;
         identifSize++;
         arryC++;
         //getNextStrngArry(arryStrt);
@@ -154,6 +167,7 @@ void parseConstLsts(){
         parseConstnts();
         //Here is where we start to search the global DCL table first run should return a false
         x=searchVarblTble(tmpLexm,0);
+        //also need to search Type, and procedure table
         //===============Need a method to find the current size of the table so I can auto index============
         if(x != 1){
             size = returnSize();
@@ -162,7 +176,7 @@ void parseConstLsts(){
         }
         //error handler here
         matchLexTok(lexm,tokn,";");
-        if(compLexTok(tmpLexm,tmpTokn,"IDENTIF")==0){
+        if(compLexTok(tmpLexm,tokn,"IDENTIF")==0){
 //            getNextStrngArry(arryStrt); //incrementing the pointer seems to be skipping...
             i = 1;
         }
@@ -361,6 +375,7 @@ void matchLexTok(char *lex, char *tok, char *valComp){
         getNextStrngArry(arryStrt);
     }else{
         printf("Error in MustMatch %s & %s\n",tokn, lexm);
+        exit;
     }
 }
 //=====================================================================================================================
